@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+//int main()
+//{
+//	char* p = "dhhg";//常量字符串
+//	*p = 'e';
+//	printf("%s", p);
+//	return 0;
+//}
+int main()
+{
+	int arr1[] = { 1,2,3,4,5 };
+	int arr2[] = { 4,3,2,2,5 };
+	int arr3[] = { 1,2,3,3,9 };
+	int* part[] = { arr1,arr2,arr3 };
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		int j = 0;
+		for (j = 0; j < 5; j++)
+		{
+			printf("%d ",*(part[i]+j));
+		}
+		printf("\n");
+
+	}
+	return 0;
+}
+
