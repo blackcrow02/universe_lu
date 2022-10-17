@@ -1,0 +1,82 @@
+int main()
+{
+	int arr[10] = { 0 };
+	int(*arr[10]) = arr;
+	int(*arf[4])(int, int);
+	int* (*arff[4])(int, int) = arf;
+}
+void men()
+{
+	printf("                                    \n         ");
+	printf("     1.add       2.sub          \n       ");
+	printf("      3.mul     4.div            \n       ");
+	printf("            5.quit          \n  ");
+	printf("                         \n");
+	printf("                       \n  ");
+}
+
+int add(int x, int y)
+
+{
+	return x + y;
+
+}
+int sub(int x, int y)
+{
+	return x - y;
+}
+int mul(int x, int y)
+{
+	return x * y;
+}
+int div(int x, int y)
+{
+	return x / y;
+}
+void huitiao(int (*p)(int ,int	))
+{
+	int x = 0;
+	int	y = 0;
+	printf("输入两个值");
+	scanf("%d %d", &x ,&y);
+	printf("%d", p(x, y));
+
+
+}
+int main()
+{
+	int  iunp = 0;
+	do
+	{
+
+		men();
+	    printf("选择");
+		scanf("%d", &iunp);
+		switch (iunp)
+		{
+		case 1:
+			huitiao(add);
+			break;
+		case 2:
+			huitiao(sub);
+			break;
+		case 3:
+			huitiao(mul);
+			break;
+		case 4:
+			huitiao(div);
+			break;
+		case 0:
+			printf("退出");
+			break;
+		default:
+			printf("错误");
+			break;
+		}
+
+	}while(iunp);
+	
+	return 0;
+}
+
+
