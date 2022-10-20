@@ -1,0 +1,73 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<assert.h>
+char* my_strcpy(char* p,const char* p1)
+{
+	assert(p1 != NULL);
+	assert(p != NULL);
+	char* ret = p;
+	while (*p++ = *p1++)
+	{
+		;
+	}
+	return ret;
+}
+//int main()
+//{
+//	char arr[20] = { "halle"	};
+//	char arr1[] = { "af" };
+//	my_strcpy(arr, arr1);
+//	printf("%s", arr);
+//	return 0;\\拷贝
+//}
+char *my_strcat(char* dest, char* str)
+{
+	char* ret = dest;
+	assert(dest != NULL);
+	assert(str);
+	while (*dest!='\0')
+	{
+		dest++;
+
+	}
+	while (*dest++ = *str++)
+	{
+		;
+	}
+	return ret;
+}
+//int main()
+//{
+//	char arr[20] = { "hello" };
+//	char arr2[20] = { " wrod" };
+//	my_strcat(arr, arr2	);
+//	printf("%s", arr);
+//	return 0;//追加
+//}
+int my_strcmp(const char* str, const char* str1)
+{
+	assert(str && str1);
+	while (*str == *str1)
+	{
+		if (*str =='/0')
+		{
+			return 0;
+		}
+		str++;
+		str1++;
+	}
+	   
+	return (*str-*str1);
+
+	
+}
+int main()
+{
+	char* arr = "ab";
+	char* arr1 = "abcd";
+	int ret =my_strcmp(arr, arr1);
+	printf("%d", ret);
+	return 0;//比大小
+}
+
+	
